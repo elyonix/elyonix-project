@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-blue-primary: #1432F5;
+  --color-blue-mid: #4A5FFF;
+  --color-blue-light: #E8EBFE;
+  --color-dark: #0A0A0A;
+  --color-gray-dark: #374151;
+  --color-gray-mid: #6B7280;
+  --color-gray-light: #F5F5F7;
+  --color-green: #10B981;
+  --color-red: #E53E3E;
+  --color-orange: #D97706;
+  --font-sans: Inter, Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A0A0A;
+  color: #ffffff;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1432F5;
+  border-radius: 3px;
+}
+
+/* Decorative glow circles */
+.glow-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(20, 50, 245, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Animated gradient border on cards */
+.card-dark {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+.card-dark:hover {
+  border-color: rgba(20, 50, 245, 0.4);
+  transform: translateY(-2px);
+}
+
+.card-light {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.card-light:hover {
+  box-shadow: 0 8px 40px rgba(20,50,245,0.12);
+  transform: translateY(-2px);
+}
+
+/* Section spacing */
+.section-pad {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+}
