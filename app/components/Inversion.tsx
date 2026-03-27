@@ -19,7 +19,7 @@ export default function Inversion() {
           {/* Scan — featured */}
           <div className="lg:col-span-2 relative">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#1432F5] text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide z-10">
-              Producto de entrada — Foco principal
+              Primera fase · Diagnóstico inicial
             </div>
             <div className="card-light p-8 md:p-10 border-2 border-[#1432F5]/30">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-8">

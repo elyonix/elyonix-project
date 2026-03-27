@@ -85,7 +85,7 @@ export default function PasosGarantia() {
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-[#1432F5]/10">
             <div className="flex justify-center mb-6">
               <div className="w-16 h-16 rounded-full bg-[#10B981]/15 border border-[#10B981]/30 flex items-center justify-center text-3xl">
-                🛡
+                🔒
               </div>
             </div>
             <p className="text-xl md:text-2xl font-bold text-[#0A0A0A] leading-relaxed mb-6">
