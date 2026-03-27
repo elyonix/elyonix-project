@@ -11,7 +11,7 @@ const problems = [
       "Un negocio con 10 leads diarios que pierde 3 por falta de seguimiento, a $200 ticket promedio, deja $18,000/mes sobre la mesa.",
   },
   {
-    icon: "⏱",
+    icon: "🔥",
     color: "#D97706",
     bgColor: "rgba(217, 119, 6, 0.1)",
     borderColor: "rgba(217, 119, 6, 0.2)",

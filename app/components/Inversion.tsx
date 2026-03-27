@@ -29,12 +29,8 @@ export default function Inversion() {
                 </div>
                 <div className="text-right">
                   <div className="flex items-baseline gap-2 justify-end">
-                    <span className="text-4xl font-black text-[#0A0A0A]">$500</span>
+                    <span className="text-4xl font-black text-[#0A0A0A]">$1,000</span>
                     <span className="text-[#6B7280]">USD</span>
-                  </div>
-                  <div className="flex items-center gap-2 mt-1 justify-end">
-                    <span className="text-sm text-[#6B7280] line-through">$1,000 USD</span>
-                    <span className="bg-[#E53E3E]/10 text-[#E53E3E] text-xs font-bold px-2 py-0.5 rounded">Precio lanzamiento</span>
                   </div>
                   <p className="text-xs text-[#6B7280] mt-1">Pago 100% al inicio</p>
                 </div>
@@ -46,18 +42,6 @@ export default function Inversion() {
                   <span className="font-semibold text-[#E53E3E]">¿Cuánto te cuesta NO hacer esto?</span>{" "}
                   Si pierdes $2,000/mes en seguimientos fallidos, en 3 meses habrás perdido $6,000. El Scan cuesta una fracción de eso.
                 </p>
-              </div>
-
-              {/* Payment methods */}
-              <div className="mb-8">
-                <p className="text-sm text-[#6B7280] font-medium mb-3">Métodos de pago</p>
-                <div className="flex flex-wrap gap-2">
-                  {["Nequi", "Daviplata", "Transferencia bancaria", "PayPal"].map((method) => (
-                    <span key={method} className="bg-[#E8EBFE] text-[#1432F5] text-xs font-semibold px-3 py-1 rounded-full">
-                      {method}
-                    </span>
-                  ))}
-                </div>
               </div>
 
               {/* Scarcity */}
@@ -75,35 +59,45 @@ export default function Inversion() {
                 href="#formulario"
                 className="block w-full bg-[#1432F5] hover:bg-[#4A5FFF] text-white text-center font-bold py-4 rounded-xl transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/25 text-lg"
               >
-                Reservar mi cupo — $500 USD
+                Reservar mi cupo
               </a>
               <p className="text-xs text-[#6B7280] text-center mt-3">Solo 3 cupos por mes · Respondemos en 24 horas</p>
             </div>
           </div>
 
-          {/* Core — secondary mention */}
+          {/* Core — next step */}
           <div className="card-light p-7 opacity-90">
             <h3 className="text-lg font-bold text-[#0A0A0A] mb-1">Elyonix Core™</h3>
-            <p className="text-sm text-[#6B7280] mb-6">Implementación del sistema de crecimiento</p>
+            <p className="text-sm text-[#6B7280] mb-6">El siguiente paso después del Scan</p>
 
-            <div className="space-y-3 mb-6">
-              {[
-                { tier: "Esencial", price: "Desde $500 USD", desc: "1-2 automatizaciones + CRM" },
-                { tier: "Completa", price: "Desde $1,000 USD", desc: "3-5 flujos + integraciones + Ads", featured: true },
-                { tier: "Avanzada", price: "Desde $2,000 USD", desc: "Sistema multi-área + IA avanzada" },
-              ].map((plan) => (
-                <div
-                  key={plan.tier}
-                  className={`p-4 rounded-xl border ${plan.featured ? "border-[#1432F5]/30 bg-[#E8EBFE]" : "border-gray-200"}`}
-                >
-                  <div className="flex items-center justify-between mb-0.5">
-                    <span className="font-bold text-[#0A0A0A] text-sm">{plan.tier}</span>
-                    {plan.featured && <span className="text-xs bg-[#1432F5] text-white px-2 py-0.5 rounded-full">Más contratado</span>}
-                  </div>
-                  <p className="text-[#1432F5] font-bold text-sm">{plan.price}</p>
-                  <p className="text-xs text-[#6B7280] mt-0.5">{plan.desc}</p>
-                </div>
-              ))}
+            <div className="space-y-4 mb-6">
+              <p className="text-sm text-[#374151] leading-relaxed">
+                Una vez entregado el diagnóstico, diseñamos juntos el sistema de implementación. El roadmap del Scan define exactamente qué se construye, en qué orden y con qué impacto esperado.
+              </p>
+              <div className="flex items-start gap-3">
+                <svg className="w-4 h-4 text-[#10B981] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm text-[#374151]">CRM y sistema de ventas</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <svg className="w-4 h-4 text-[#10B981] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm text-[#374151]">Automatizaciones de operación</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <svg className="w-4 h-4 text-[#10B981] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm text-[#374151]">IA aplicada al negocio</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <svg className="w-4 h-4 text-[#10B981] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+                <span className="text-sm text-[#374151]">Capacitación + 30 días de soporte</span>
+              </div>
             </div>
 
             <div className="bg-[#10B981]/8 border border-[#10B981]/20 rounded-xl p-4 mb-4">
