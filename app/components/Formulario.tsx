@@ -21,12 +21,6 @@ const facturacionOptions = [
   { value: "mas-200k", label: "Más de $200,000 USD/mes" },
 ];
 
-function encode(data: Record<string, string>) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
 export default function Formulario() {
   const [formData, setFormData] = useState<FormData>({
     nombre: "",
@@ -68,11 +62,12 @@ export default function Formulario() {
     if (!validate()) return;
     setStatus("loading");
     try {
-      await fetch("/", {
+      const res = await fetch("/api/diagnostico", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "diagnostico", ...formData }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
+      if (!res.ok) throw new Error("Error del servidor");
       setStatus("success");
     } catch {
       setStatus("error");
@@ -145,25 +140,11 @@ export default function Formulario() {
 
           {/* Right — form */}
           <div>
-            {/* Hidden form for Netlify bot detection */}
-            <form name="diagnostico" data-netlify="true" hidden>
-              <input name="nombre" type="text" />
-              <input name="negocio" type="text" />
-              <input name="cargo" type="text" />
-              <select name="facturacion" />
-              <input name="email" type="email" />
-              <textarea name="problema" />
-            </form>
-
             <form
-              name="diagnostico"
-              method="POST"
-              data-netlify="true"
               onSubmit={handleSubmit}
               noValidate
               className="space-y-5"
             >
-              <input type="hidden" name="form-name" value="diagnostico" />
 
               {/* Nombre */}
               <div>
