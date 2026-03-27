@@ -19,7 +19,7 @@ export default function Footer() {
             Cada semana sin resolver esto sigues perdiendo dinero
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-xl mx-auto">
-            ¿Cuánto te cuesta esperar? Un mes más de leads perdidos, horas quemadas y sin visibilidad. El diagnóstico cuesta $500. El costo de no hacerlo es mucho mayor.
+            ¿Cuánto te cuesta esperar? Un mes más de leads perdidos, horas quemadas y sin visibilidad. El diagnóstico cuesta $1,000. El costo de no hacerlo es mucho mayor.
           </p>
           <a
             href="#formulario"

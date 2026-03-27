@@ -41,7 +41,7 @@ export default function CasoEstudio() {
           <p className="text-gray-400 text-sm mb-2">Inversión total (Scan + Core)</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12">
             <div>
-              <p className="text-4xl md:text-5xl font-black text-white">$1,500</p>
+              <p className="text-4xl md:text-5xl font-black text-white">Scan + Core</p>
               <p className="text-gray-400 text-sm mt-1">inversión total</p>
             </div>
             <div className="text-[#10B981] text-3xl font-black">→</div>

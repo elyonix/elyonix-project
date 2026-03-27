@@ -267,7 +267,7 @@ export default function Formulario() {
                     Enviando...
                   </>
                 ) : (
-                  "Solicitar Diagnóstico — $500 USD"
+                  "Solicitar Diagnóstico"
                 )}
               </button>
 

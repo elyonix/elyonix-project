@@ -66,7 +66,11 @@ export default function Inversion() {
           </div>
 
           {/* Core — next step */}
-          <div className="card-light p-7 opacity-90">
+          <div className="relative">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#0A0A0A] text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wide z-10 whitespace-nowrap">
+              Segunda fase · Implementación
+            </div>
+            <div className="card-light p-7 border-2 border-[#0A0A0A]/20">
             <h3 className="text-lg font-bold text-[#0A0A0A] mb-1">Elyonix Core™</h3>
             <p className="text-sm text-[#6B7280] mb-6">El siguiente paso después del Scan</p>
 
@@ -107,6 +111,7 @@ export default function Inversion() {
               </p>
             </div>
             <p className="text-xs text-[#6B7280]">Pago: 50% al inicio · 50% al entregar</p>
+            </div>
           </div>
         </div>
       </div>
