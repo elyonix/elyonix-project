@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "Elyonix AI — Más Ventas, Menos Caos",
@@ -16,20 +18,11 @@ export const metadata: Metadata = {
     title: "Elyonix AI — Más Ventas, Menos Caos",
     description: "Encontramos dónde tu negocio pierde dinero, tiempo y clientes — y construimos el sistema de IA y automatización que lo resuelve. En 30 días.",
     siteName: "Elyonix AI",
-    images: [
-      {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Elyonix AI — Sistemas de crecimiento B2B",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Elyonix AI — Más Ventas, Menos Caos",
     description: "Sistemas de IA y automatización para negocios que quieren vender más sin depender de más personas.",
-    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,
@@ -66,6 +59,8 @@ export default function RootLayout({
       </head>
       <body className="bg-[#0A0A0A] text-white antialiased">
         {children}
+        <GoogleAnalytics />
+        <CookieBanner />
       </body>
     </html>
   );

@@ -15,7 +15,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Forward to webhook if configured (Make.com, n8n, Zapier, etc.)
-    const webhookUrl = process.env.FORM_WEBHOOK_URL;
+    const webhookUrl =
+      process.env.FORM_WEBHOOK_URL ||
+      "https://n8n-n8n.q8g4ei.easypanel.host/webhook/6747c691-6134-4c4c-b8cb-55d8a9679db6";
     if (webhookUrl) {
       await fetch(webhookUrl, {
         method: "POST",

@@ -1,5 +1,6 @@
 "use client";
 import { useState, FormEvent } from "react";
+import { useRouter } from "next/navigation";
 
 type FormData = {
   nombre: string;
@@ -22,6 +23,7 @@ const facturacionOptions = [
 ];
 
 export default function Formulario() {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     nombre: "",
     negocio: "",
@@ -68,7 +70,7 @@ export default function Formulario() {
         body: JSON.stringify(formData),
       });
       if (!res.ok) throw new Error("Error del servidor");
-      setStatus("success");
+      router.push("/gracias");
     } catch {
       setStatus("error");
     }
@@ -78,31 +80,6 @@ export default function Formulario() {
     `w-full bg-white/5 border ${
       errors[field] ? "border-[#E53E3E]" : "border-white/15"
     } rounded-xl px-4 py-3.5 text-white placeholder-gray-500 focus:outline-none focus:border-[#1432F5] focus:ring-1 focus:ring-[#1432F5] transition-colors duration-200 text-sm`;
-
-  if (status === "success") {
-    return (
-      <section id="formulario" className="bg-[#0A0A0A] section-pad">
-        <div className="max-w-2xl mx-auto px-4 text-center">
-          <div className="card-dark p-12">
-            <div className="w-16 h-16 rounded-full bg-[#10B981]/15 border border-[#10B981]/30 flex items-center justify-center mx-auto mb-6 text-3xl">
-              ✅
-            </div>
-            <h2 className="text-3xl font-black text-white mb-4">¡Solicitud recibida!</h2>
-            <p className="text-gray-400 text-lg mb-6">
-              Gracias por tu interés en el Elyonix Scan™. Revisaremos tu información y te contactaremos en las próximas{" "}
-              <span className="text-white font-semibold">24 horas</span>.
-            </p>
-            <p className="text-gray-500 text-sm">
-              ¿Tienes alguna pregunta urgente?{" "}
-              <a href="mailto:contacto@elyonixai.com" className="text-[#4A5FFF] hover:underline">
-                contacto@elyonixai.com
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section id="formulario" className="bg-[#0A0A0A] section-pad relative overflow-hidden">
